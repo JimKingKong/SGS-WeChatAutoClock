@@ -1,6 +1,14 @@
 import requests
 import os
-from setting import log
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(message)s',
+    datefmt='%Y-%m-%dT%H:%M:%S')
+
+
+log = logger = logging
 
 # 获取cookie
 COOKIE = ''
