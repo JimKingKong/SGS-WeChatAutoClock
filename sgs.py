@@ -19,7 +19,8 @@ for i in range(len(cookie_list)):
         'User-Agent': ua,
         'cookie' : sendCookie
     } 
-    r[i] = requests.post(url=url, headers=headers)
+    r.append(requests.post(url=url, headers=headers))
+#     r[i] = requests.post(url=url, headers=headers)
     logging.info(r[i].json())
 
 if i >= (len(cookie_list)):
