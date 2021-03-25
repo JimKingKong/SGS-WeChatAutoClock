@@ -5,7 +5,7 @@ import logging
 
 # 获取cookie
 COOKIE = ''
-if COOKIE = os.environ['SGSCOOKIE']:
+if os.environ['SGSCOOKIE']!=='':
         COOKIE = os.environ['SGSCOOKIE']
         cookie_list = COOKIE.split('#')
 url = 'http://wx.sanguosha.com/api/clock/do'
