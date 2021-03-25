@@ -1,6 +1,6 @@
 import requests
 import os
-from settings import log
+import log
 
 # 获取cookie
 COOKIE = ''
@@ -19,7 +19,7 @@ for i in range(len(cookie_list)):
         'cookie' : sendCookie
     } 
     r = requests.post(url=url, headers=headers)
-    log.info(r.json())
+    print.info(r.json())
 
 if i >= (len(cookie_list)):
     log.info('签到完成')
