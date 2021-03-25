@@ -1,5 +1,6 @@
 import requests
 import os
+from settings import log
 
 # 获取cookie
 COOKIE = ''
