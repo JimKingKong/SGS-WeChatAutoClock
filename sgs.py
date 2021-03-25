@@ -18,14 +18,14 @@ for i in range(len(cookie_list)):
         'User-Agent': ua,
         'cookie' : sendCookie
     } 
-    r = requests.post(url=url, headers=headers)
-    logging.info(r.json())
+    r[i] = requests.post(url=url, headers=headers)
+    logging.info(r[i].json())
 
 if i >= (len(cookie_list)):
     logging.info('签到完成')
 
 logging.info('任务结束')
-# echo '${{ secrets.SGSCOOKIE }} 任务结束'
+echo '${{ secrets.SGSCOOKIE }} 任务结束'
 
 
 
