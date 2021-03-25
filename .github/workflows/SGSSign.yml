@@ -4,9 +4,8 @@
 name: sgs
 
 on:
-#  schedule:
-#     - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
-   [push]
+ schedule:
+    - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
   
 env:
   RUN_ENV: 'prod'
@@ -34,6 +33,7 @@ jobs:
         SGSCOOKIE: ${{ secrets.SGSCOOKIE }}
       run: |
           python -m pip install --upgrade pip
+          pip install log
           pip install requests
           python3 ./sgs.py
 
