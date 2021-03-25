@@ -4,8 +4,10 @@
 name: sgs
 
 on:
- schedule:
-    - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
+#  schedule:
+#     - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
+   [push]
+  
 env:
   RUN_ENV: 'prod'
   TZ: 'Asia/Shanghai'
