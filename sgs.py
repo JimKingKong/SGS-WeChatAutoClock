@@ -25,7 +25,7 @@ if i >= (len(cookie_list)):
     logging.info('签到完成')
 
 logging.info('任务结束')
-echo '${{ secrets.SGSCOOKIE }} 任务结束'
+# echo '${{ secrets.SGSCOOKIE }} 任务结束'
 
 
 
