@@ -1,6 +1,6 @@
 import requests
 import os
-import logging
+from setting import log
 
 # 获取cookie
 COOKIE = ''
@@ -12,19 +12,19 @@ ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko
 
 # 开始签到
 for i in range(len(cookie_list)):
-    logging.info(f'准备为 NO.{i + 1} 账号签到...')
+    log.info(f'准备为 NO.{i + 1} 账号签到...')
     sendCookie = cookie_list[i]
     headers = {
         'User-Agent': ua,
         'cookie' : sendCookie
     } 
     r[i] = requests.post(url=url, headers=headers)
-    logging.info(r[i].json())
+    log.info(r[i].json())
 
 if i >= (len(cookie_list)):
-    logging.info('签到完成')
+    log.info('签到完成')
 
-logging.info('任务结束')
+log.info('任务结束')
 # echo '${{ secrets.SGSCOOKIE }} 任务结束'
 
 
